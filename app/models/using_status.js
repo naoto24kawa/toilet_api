@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var UsingStatusSchema = new Schema({
   flag: { type: Boolean, require: true},
-  date: { type: Date, default: Date.now}
+  date: { type: Date}
 });
 
 module.exports = mongoose.model('Using_Status', UsingStatusSchema);
