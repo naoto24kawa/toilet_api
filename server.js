@@ -48,7 +48,7 @@ router.route('/using_status')
 
     .get(function (req, res) {
         UsingStatus.find().sort({
-            date: -1
+            date: 1
         }).limit(10).exec(function (err, status) {
             if (err) {
                 res.send(err);
