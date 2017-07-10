@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
   res.json({ message: 'Successfully Posted a test message.'});
 });
 
-router.route('using_status')
+router.route('/using_status')
 
   .post(function(req, res) {
 
