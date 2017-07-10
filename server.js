@@ -41,7 +41,7 @@ router.route('/using_status')
   })
 
   .get(function(req, res){
-    UsingStatus.findOne({}, {}, {sort: {'date': -1}}, function(err, status) {
+    UsingStatus..findOne().sort({date: -1})exec(function(err, status) {
     if(err) {
       res.send(err);
     }
