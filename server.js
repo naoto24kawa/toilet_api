@@ -34,7 +34,9 @@ router.route('/using_status')
         var using_status = new UsingStatus();
 
         using_status.flag = req.body.flag;
-        using_status.date = req.body.date;
+
+        var dt = new Date();
+        using_status.date = dt.toFormat("YYYY/MM/DD HH時MI分SS秒");
 
         using_status.save(function (err) {
             if (err) {
